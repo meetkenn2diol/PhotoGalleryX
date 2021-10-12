@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bignerdbranch.android.photogalleryx">
+    <!-- Declare a custom permission -->
+    <permission
+        android:name="com.bignerdranch.android.photogalleryx.PRIVATE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Acquire a custom permission -->
+    <uses-permission android:name="com.bignerdranch.android.photogalleryx.PRIVATE" />
+
+    <application
+        android:name=".PhotoGalleryApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PhotoGalleryX">
+        <!--declare .PhotoPageActivity and inform PhotoPageActivity that you want to handle configuration changes yourself.-->
+        <activity
+            android:name=".PhotoPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".PhotoGalleryActivityX">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Register a static BroadcastReceiver -->
+        <receiver
+            android:name=".NotificationReceiver"
+            android:exported="false"
+            android:permission="com.bignerdranch.android.photogalleryx.PRIVATE">
+
+            <!--
+               To ensure that NotificationReceiver receives the ordered broadcast after your dynamically registered
+               receiver (so it can check whether it should post the notification to NotificationManager), you need to
+               set a low priority
+            -->
+            <intent-filter android:priority="-999">
+                <action android:name="com.bignerdranch.android.photogalleryx.SHOW_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

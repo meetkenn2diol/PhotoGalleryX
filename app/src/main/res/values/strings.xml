@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PhotoGalleryX</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="flickr_base_url">https://www.Flickr.com/</string>
+    <string name="flickr_url_interestingness">https://www.Flickr.com/services/rest/?method=flickr.interestingness.getList&amp;api_key=2c45428639e6029d7672b306080dd08a&amp;format=json&amp;nojsoncallback=1&amp;page=1&amp;extras=url_s</string>
+    <string name="flickr_url_interestingness_add_page_number">https://www.Flickr.com/services/rest/?method=flickr.interestingness.getList&amp;api_key=2c45428639e6029d7672b306080dd08a&amp;format=json&amp;nojsoncallback=1&amp;page=%1$s&amp;extras=url_s</string>
+    <string name="no_image_found">No Image Found</string>
+    <string name="search">Search</string>
+    <string name="clear_search">Clear Search</string>
+    <string name="notification_channel_name">FlickrFetchr</string>
+    <string name="new_pictures_title">New PhotoGallery Pictures</string>
+    <string name="new_pictures_text">You have new pictures in PhotoGallery.</string>
+    <string name="start_polling">Start polling</string>
+    <string name="stop_polling">Stop polling</string>
+    <string name="activate_poll">Activate Polling</string>
+</resources>

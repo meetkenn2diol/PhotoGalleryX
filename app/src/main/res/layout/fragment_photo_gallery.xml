@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photo_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".PhotoGalleryFragment" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_transparent_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    app:spanCount="3" -->
+    <!-- <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/no_image_found"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:visibility="gone">
+
+         <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/imageView"
+             android:layout_width="match_parent"
+             android:layout_height="286dp"
+             android:contentDescription="@string/no_image_found"
+             app:layout_constraintBottom_toTopOf="@+id/textView"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:srcCompat="@drawable/ic_baseline_emoji_nature_24" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/textView"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:labelFor="@+id/imageView"
+             android:text="@string/no_image_found"
+             android:textAlignment="center"
+             android:textSize="30sp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/imageView" />
+     </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
